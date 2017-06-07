@@ -20,7 +20,7 @@ class HomeHeader extends React.Component {
                 </div>
                 <div className="home-header-middle">
                     <div className="search-container">
-                        <i className="icon-search"></i>
+                        <i className="icon-seek"></i>
                         &nbsp;
                         <SearchInput value="" enterHandle={this.enterHandle.bind(this)}/>
                     </div>

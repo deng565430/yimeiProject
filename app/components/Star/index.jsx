@@ -12,8 +12,9 @@ class Star extends React.Component {
         }
     }
     render() {
+
         // 获取 star 数量，并取余5（最多5个star）
-        let star = this.state.star || 0
+        let star = this.props.star || 0
         if (star > 5) {
             star = star % 5
         }
