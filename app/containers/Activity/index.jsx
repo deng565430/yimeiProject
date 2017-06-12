@@ -1,6 +1,9 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
+import ActivityHeader from '../../components/ActivityHeader'
+import ActivityMiddle from '../../components/ActivityMiddle'
+
 class Activity extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -8,7 +11,10 @@ class Activity extends React.Component {
     }
     render() {
         return (
-            <h1>Activity</h1>
+            <div>
+                <ActivityHeader />
+            	<ActivityMiddle />
+            </div>
         )
     }
 }

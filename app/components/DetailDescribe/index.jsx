@@ -12,11 +12,13 @@ class Describe extends React.Component {
     render() {
         return (
           <div>
-            <div>
+            <div className="detail-desc">
                 <p>
                     {this.props.data}
-
-                    <Link to="/search/jingdian">查看更多</Link>
+                    簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+                    簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+                    簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
+                    <Link to="/search/jingdian">查看更多<i className="icon-ico-unfold"></i></Link>
                 </p>
 
             </div>

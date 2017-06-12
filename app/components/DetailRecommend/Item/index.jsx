@@ -14,7 +14,7 @@ class List extends React.Component {
           <div className="recommend">
                 <div className="recommend-img">
                     <div>
-                        <img src={data.touxiang} />
+                        <img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
                     </div>
                 </div>
                 <div className="recommend-title">

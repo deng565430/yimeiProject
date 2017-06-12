@@ -28,7 +28,6 @@ class Detail extends React.Component {
                 <Recommend data={this.state.recommed} />
                 <Case />
                 <Activity />
-                <span className="icon-seek"></span>
             </div>
         )
     }

@@ -2,6 +2,7 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import Item from './Item'
+import Carousel from '../Carousel'
 
 import './style.less'
 
@@ -13,18 +14,12 @@ class DetailRecommend extends React.Component {
     render() {
         console.log(this.props.data)
         return (
-          <div>
-                <div>
-                    推荐医生
+          <div className="detail-recommend">
+                <div className="detail-recommend-doctor">
+                    <i className="icon-doctor"></i> 推荐医生
                 </div>
                 <div className="parent-recommend">
-                    {
-                        this.props.data
-                        ? this.props.data.map((item, index) => {
-                            return <Item key={index} data={item} />
-                         })
-                        : ''
-                    }
+                   <Carousel />
                 </div>
           </div>
         )

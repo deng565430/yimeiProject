@@ -16,7 +16,7 @@ class SearchInput extends React.Component {
             <input
                 className="search-input" 
                 type="text" 
-                placeholder="大家都在搜：鼻部整形、冰点脱毛" 
+                placeholder={this.props.placeholder}
                 onChange={this.ChangeHandle.bind(this)}
                 onKeyUp={this.KeyUpHandle.bind(this)}
                 value={this.state.value}/>

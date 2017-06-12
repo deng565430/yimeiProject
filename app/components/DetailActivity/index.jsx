@@ -12,8 +12,8 @@ class DetailActivity extends React.Component {
     }
     render() {
         return (
-          <div>
-               <div> 活动</div>
+          <div className="detail-activity">
+               <div className="detail-activity-title"> 活动</div>
                <div>
                    {
                     [1,2,3,4,5].map((item,index) => {

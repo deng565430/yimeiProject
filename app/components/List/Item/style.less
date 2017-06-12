@@ -2,27 +2,31 @@
     width: 100%;
     padding: 10px 0;
     border-bottom: 1px solid #f1f1f1;
-
     .item-img-container {
-        width: 120px;
-        height: 90px;
-
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        overflow: hidden;
         img {
             width: 100%;
             height: 100%;
         }
     }
-
+    .list-item-top{
+        border-bottom: 1px solid #e5e5e5;
+        margin-bottom: 1rem;
+    }
     .item-content {
-        margin-left: 100px;
+        margin-left: 5rem;
         padding-left: 30px;
-
+        height: 7rem;
         .item-title-container {
             height: 25px;
 
             h3 {
-                font-size: 18px;
-                line-height: 1;
+                font-size: 1rem;
+                font-weight: 900;
+                line-height: 1.4rem;
                 color: #333;
             }
             span {
@@ -31,25 +35,42 @@
                 color: #999;
             }
         }
-        .item-sub-title {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.5;
+        .item-striping {
+            height: 1rem;
+            border: 1px solid red;
         }
+        .item-sub-title {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            line-height: 2.1;
+            span{
+                font-size: .5rem;
+                color: #eca450;
+            }
+            span:last-child{
+                color: #b0b0b0
+            }
+        }
+    }
+    .list-item-bottom{
+        padding-left: 5rem;
         .item-price-container {
             margin-top: 10px;
+            height: 1.5rem;
 
             .price {
-                font-size: 18px;
-                line-height: 1;
-                font-weight: 900;
-                color: rgb(233, 32, 61);
+                font-size: 1rem;
+                line-height: 1rem;
+                color: #a5a5a5;
             }
             .mumber {
                 font-size: 13px;
                 line-height: 18px;
                 color: #999;
             }
+        }
+        .item-price-container:first-child{
+            border-bottom: 1px solid #e5e5e5;
         }
     }
 }
