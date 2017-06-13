@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "set NODE_ENV=dev && webpack-dev-server --progress --colors",
+    "dev": "set NODE_ENV=dev && webpack-dev-server --host 0.0.0.0 --progress --colors",
     "server": "node --harmony ./server/server.js",
     "build": "rd/s/q build && set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress --colors"
   },

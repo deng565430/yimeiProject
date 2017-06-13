@@ -7,6 +7,7 @@ import Search from '../containers/Search'
 import Detail from '../containers/Detail'
 import Doctor from '../containers/Doctor'
 import Activity from '../containers/Activity'
+import Case from '../containers/Case'
 import NotFound from '../containers/404'
 
 // 如果是大型项目，router部分就需要做更加复杂的配置
@@ -22,6 +23,7 @@ class RouterMap extends React.Component {
                     <Route path='/detail/:id' component={Detail}/>
                     <Route path='/doctor/:id' component={Doctor}/>
                     <Route path='/activity/:id' component={Activity}/>
+                    <Route path='/case/:id' component={Case}/>
                     <Route path='*' component={NotFound}/>
                 </Route>
             </Router>

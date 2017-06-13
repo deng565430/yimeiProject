@@ -1,6 +1,8 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import ReactSwipe from 'react-swipe'
+import { Link } from 'react-router'
+
 import './style.less'
 
 class Carousel extends React.Component {
@@ -13,7 +15,7 @@ class Carousel extends React.Component {
     }
     render() {
         const opt = {
-            auto: '',
+            auto: 0,
             callback: function (index) {
                 // 更新当前轮播图的index
                 this.setState({index: index});
@@ -22,17 +24,17 @@ class Carousel extends React.Component {
         const data = this.props.data;
         return (
           <div className="carousel">
-              <ReactSwipe swipeOptions={opt}> 
+              <ReactSwipe> 
                 <div className="carousel-item">
                     <div>
-                        <div className="carousel-img"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></div>
+                        <div className="carousel-img"><Link to="/doctor/1"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></Link></div>
                     </div>
                     <div>
-                        <div className="carousel-img"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></div>
+                        <div className="carousel-img"><Link to="/doctor/1"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></Link></div>
 
                     </div>
                     <div>
-                        <div className="carousel-img"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></div>
+                        <div className="carousel-img"><Link to="/doctor/1"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></Link></div>
                         
                     </div>
                 </div>

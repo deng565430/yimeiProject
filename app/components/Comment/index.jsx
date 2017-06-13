@@ -10,6 +10,9 @@ class Commet extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+        this.state = {
+            value: ''
+        }
     }
     render() {
         return (
@@ -18,7 +21,7 @@ class Commet extends React.Component {
                     <div className="search-container">
                         <i className="icon-comment"></i>
                         &nbsp;
-                        <SearchInput value="" enterHandle={this.enterHandle.bind(this)} placeholder="写评论...."/>
+                        <SearchInput value={this.state.value} enterHandle={this.enterHandle.bind(this)} placeholder="写评论...."/>
                     </div>
                 </div>
                 <div className="comment-right float-right">
@@ -29,7 +32,7 @@ class Commet extends React.Component {
         )
     }
     enterHandle(value) {
-        hashHistory.push('/search/all/' + encodeURIComponent(value))
+        console.log(value)
     }
 }
 

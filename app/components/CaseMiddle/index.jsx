@@ -12,7 +12,7 @@ class ActivityMiddle extends React.Component {
     }
     render() {
         return (
-            <div id="activity-middle">
+            <div id="case-middle">
               <div className="middle-top">蜕变时光轴</div>
               <div>
                   {

@@ -14,7 +14,7 @@ class Slideshow extends React.Component {
     }
     render() {
         const opt = {
-            auto: '',
+            auto: 0,
             callback: function (index) {
                 // 更新当前轮播图的index
                 this.setState({index: index});

@@ -17,7 +17,6 @@ module.exports = {
     resolve:{
         extensions:['', '.js','.jsx']
     },
-
     module: {
         // preLoaders: [
         //     // 报错 ？？？？？
@@ -73,6 +72,9 @@ module.exports = {
         colors: true, //终端中输出结果为彩色
         historyApiFallback: true, //不跳转
         inline: true, //实时刷新
-        hot: true  // 使用热加载插件 HotModuleReplacementPlugin
+        hot: true,  // 使用热加载插件 HotModuleReplacementPlugin
+        disableHostCheck: true, // 使用手机调试需要设为true
+        host: '0.0.0.0',   // 可以开启局域网调试
+        port: 8080   // 开启的端口号
     }
 }

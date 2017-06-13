@@ -10,8 +10,8 @@ class ActivityHeader extends React.Component {
     }
     render() {
         return (
-            <div id="active-header">
-              <div className="active-header-top">
+            <div id="case-header">
+              <div className="case-header-top">
                 <div>
                     <img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
                     <span>Before</span>
@@ -21,7 +21,7 @@ class ActivityHeader extends React.Component {
                     <span>After</span>
                 </div>
               </div>
-              <div className="active-header-middle">
+              <div className="case-header-middle">
                   <div>
                       <img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
                   </div>
@@ -36,7 +36,7 @@ class ActivityHeader extends React.Component {
                       </div>
                   </div>
               </div>
-              <div className="active-header-buttom active-header-middle">
+              <div className="case-header-buttom case-header-middle">
                   <div>
                       <img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
                   </div>

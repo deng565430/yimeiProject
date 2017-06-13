@@ -10,7 +10,7 @@ class Item extends React.Component {
     }
     render() {
         return (
-            <div className="activity-clild-item">
+            <div className="case-clild-item">
               <div className="item-top">
                 <i className="icon-label"> </i><span>   手术前</span>
               </div>
