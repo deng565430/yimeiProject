@@ -12,7 +12,7 @@ class DetailCase extends React.Component {
     }
     render() {
         return (
-           <div className="detail-case">
+           <div className="detail-casel">
              <div className="detail-case-all">整容案例</div>
              <Item />
           </div>

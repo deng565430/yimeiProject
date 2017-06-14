@@ -1,7 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
-import Item from './Item'
 import Carousel from '../Carousel'
 
 import './style.less'
@@ -10,6 +9,9 @@ class DetailRecommend extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+        this.state = {
+            data: ['/doctor/1', '/doctor/1', '/doctor/1', '/doctor/1', '/doctor/1']
+        }
     }
     render() {
         console.log(this.props.data)
@@ -19,7 +21,7 @@ class DetailRecommend extends React.Component {
                     <i className="icon-doctor"></i> 推荐医生
                 </div>
                 <div className="parent-recommend">
-                   <Carousel />
+                   <Carousel data={this.state.data}/>
                 </div>
           </div>
         )

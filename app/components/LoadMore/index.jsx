@@ -31,7 +31,6 @@ class LoadMore extends React.Component {
         function callback() {
             const top = wrapper.getBoundingClientRect().top
             const windowHeight = window.screen.height
-            console.log(wrapper.getBoundingClientRect());
             if (top && top < windowHeight) {
                 // 证明 wrapper 已经被滚动到暴露在页面可视范围之内了
                 loadMoreFn()

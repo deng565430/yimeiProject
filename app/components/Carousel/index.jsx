@@ -10,7 +10,8 @@ class Carousel extends React.Component {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
-            index: 0
+            index: 0,
+            data: [1,2,3,4,5]
         }
     }
     render() {
@@ -21,51 +22,28 @@ class Carousel extends React.Component {
                 this.setState({index: index});
             }.bind(this)
         }
-        const data = this.props.data;
         return (
           <div className="carousel">
               <ReactSwipe> 
-                <div className="carousel-item">
-                    <div>
-                        <div className="carousel-img"><Link to="/doctor/1"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></Link></div>
-                    </div>
-                    <div>
-                        <div className="carousel-img"><Link to="/doctor/1"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></Link></div>
+                {
+                    this.props.data 
+                    ? this.props.data.map((item, index) => {
+                        return <div className="carousel-item" key={index}>
+                                    <div>
+                                        <div className="carousel-img"><Link to={`${item}`}><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></Link></div>
+                                    </div>
+                                    <div>
+                                        <div className="carousel-img"><Link to={`${item}`}><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></Link></div>
 
-                    </div>
-                    <div>
-                        <div className="carousel-img"><Link to="/doctor/1"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></Link></div>
-                        
-                    </div>
-                </div>
-                <div className="carousel-item">
-                    <div>
-                        <div className="carousel-img"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></div>
-                        
-                    </div>
-                    <div>
-                        <div className="carousel-img"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></div>
-                        
-                    </div>
-                    <div>
-                        <div className="carousel-img"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></div>
-                        
-                    </div>
-                </div>
-                <div className="carousel-item">
-                    <div>
-                        <div className="carousel-img"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></div>
-                        
-                    </div>
-                    <div>
-                        <div className="carousel-img"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></div>
-                       
-                    </div>
-                    <div>
-                        <div className="carousel-img"><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></div>
-                       
-                    </div>
-                </div>
+                                    </div>
+                                    <div>
+                                        <div className="carousel-img"><Link to={`${item}`}><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></Link></div>
+                                        
+                                    </div>
+                                </div>
+                    })
+                    : ''
+                }
               </ReactSwipe> 
           </div>
         )

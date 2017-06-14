@@ -25,7 +25,6 @@ class Category extends React.Component {
                 this.setState({index: index});
             }.bind(this)
         }
-
         return (
             <div id="home-category">
                 <ReactSwipe swipeOptions={opt}>

@@ -18,7 +18,7 @@ class Describe extends React.Component {
                     簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
                     簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
                     簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-                    <Link to="/search/jingdian">查看更多<i className="icon-ico-unfold"></i></Link>
+                    <Link to="/hospital/jingdian">查看更多<i className="icon-ico-unfold"></i></Link>
                 </p>
 
             </div>

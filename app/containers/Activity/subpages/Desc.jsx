@@ -31,7 +31,52 @@ class Desc extends React.Component {
               <div className="activity-desc-middle">
                   <div>
                       <div className="activity-desc-middle-img">
-                          <img src="../../../static/image/desc_project_01.png" />
+                          <img src={require('../../../static/image/desc_project_01.png')} />
+                      </div>
+                      <div className="activity-desc-middle-desc">
+                          <ol>
+                              <li><span>1</span>玻尿酸</li>
+                              <li><span>1</span>玻尿酸</li>
+                              <li><span>1</span>玻尿酸</li>
+                              <li><span>1</span>玻尿酸</li>
+                          </ol>
+                      </div>
+                  </div>
+              </div>
+              <div className="activity-desc-middle">
+                  <div>
+                      <div className="activity-desc-middle-img">
+                          <img src={require('../../../static/image/desc_project_02.png')} />
+                      </div>
+                      <div className="activity-desc-middle-desc">
+                          <ol>
+                              <li><span>1</span>玻尿酸</li>
+                              <li><span>1</span>玻尿酸</li>
+                              <li><span>1</span>玻尿酸</li>
+                              <li><span>1</span>玻尿酸</li>
+                          </ol>
+                      </div>
+                  </div>
+              </div>
+              <div className="activity-desc-middle">
+                  <div>
+                      <div className="activity-desc-middle-img">
+                          <img src={require('../../../static/image/desc_project_02.png')} />
+                      </div>
+                      <div className="activity-desc-middle-desc">
+                          <ol>
+                              <li><span>1</span>玻尿酸</li>
+                              <li><span>1</span>玻尿酸</li>
+                              <li><span>1</span>玻尿酸</li>
+                              <li><span>1</span>玻尿酸</li>
+                          </ol>
+                      </div>
+                  </div>
+              </div>
+              <div className="activity-desc-middle">
+                  <div>
+                      <div className="activity-desc-middle-img">
+                          <img src={require('../../../static/image/desc_project_02.png')} />
                       </div>
                       <div className="activity-desc-middle-desc">
                           <ol>

@@ -21,7 +21,7 @@ class Header extends React.Component {
             	<div className="detail-title">
             		<h1>{data.name}</h1>
             	</div>
-            	<div className="detail-desc">
+            	<div className="detail-descs">
             		<div>
             			<ul>
             				<li>关注度</li>

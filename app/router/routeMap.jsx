@@ -7,6 +7,7 @@ import Search from '../containers/Search'
 import Detail from '../containers/Detail'
 import Doctor from '../containers/Doctor'
 import Activity from '../containers/Activity'
+import HospitalIntro from '../containers/HospitalIntro'
 import Case from '../containers/Case'
 import NotFound from '../containers/404'
 
@@ -21,6 +22,7 @@ class RouterMap extends React.Component {
                     <IndexRoute component={Home}/>
                     <Route path='/search/:category(/:keyword)' component={Search}/>
                     <Route path='/detail/:id' component={Detail}/>
+                    <Route path='/hospital/:id' component={HospitalIntro}/>
                     <Route path='/doctor/:id' component={Doctor}/>
                     <Route path='/activity/:id' component={Activity}/>
                     <Route path='/case/:id' component={Case}/>

@@ -14,8 +14,15 @@ class Header extends React.Component {
         console.log(data);
         return (
           <div>
-          	<ComponentsHeader data={data}/>
-          	<ComponentsFeature data={data}/>
+          	{
+              this.props.data
+              ? <div>
+                  <ComponentsHeader data={data}/>
+                  <div></div>
+                  <ComponentsFeature data={data}/>
+                </div>
+              : ''
+            }
           </div>
         )
     }

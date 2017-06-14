@@ -23,11 +23,18 @@ class Detail extends React.Component {
         const id = this.props.params.id
         return (
             <div>
-                <Header data={this.state.header}/>
-                <Describe data={this.state.describe} />
-                <Recommend data={this.state.recommed} />
-                <Case />
-                <Activity />
+                {
+                    this.props.params.id
+                    ?   <div>
+                            <Header data={this.state.header}/>
+                            <Describe data={this.state.describe} />
+                            <Recommend data={this.state.recommed} />
+                            <Case />
+                            <Activity />
+                        </div>
+                    : ''    
+                }
+                
             </div>
         )
     }
@@ -36,7 +43,6 @@ class Detail extends React.Component {
         result.then(res => {
             return res.json()
         }).then(json => {
-            console.log(json);
             this.setState({
                 header:{
                     name: json.data.name,
