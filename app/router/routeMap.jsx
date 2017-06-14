@@ -1,5 +1,8 @@
 import React from 'react'
-import { Router, Route, IndexRoute } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory  } from 'react-router'
+// 路由重定向， 解决跳转之后不是在顶部问题
+import useScroll from 'use-scroll-behavior'
+const history = useScroll(browserHistory)
 
 import App from '../containers'
 import Home from '../containers/Home'
@@ -17,7 +20,7 @@ import NotFound from '../containers/404'
 class RouterMap extends React.Component {
     render() {
         return (
-            <Router history={this.props.history}>
+            <Router history={history}>
                 <Route path='/' component={App}>
                     <IndexRoute component={Home}/>
                     <Route path='/search/:category(/:keyword)' component={Search}/>
