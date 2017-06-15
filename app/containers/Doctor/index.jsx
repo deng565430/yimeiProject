@@ -1,6 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-
+import { connect } from 'react-redux'
+import { hashHistory } from 'react-router'
 
 import Header from '../../components/DoctorHeader'
 import DoctorAddr from '../../components/DoctorAddr'
@@ -18,10 +19,29 @@ class Doctor extends React.Component {
             	<Header />
             	<DoctorAddr />
             	<DoctorDesc />
-            	<Comment />
+            	<Comment comment={this.comment.bind(this)}/>
             </div>
         )
     }
+    comment(data) {
+        if (this.props.userinfo.userName == null) {
+            hashHistory.push('/login')
+        }
+    }
 }
 
-export default Doctor
+
+function mapStateToProps(state) {
+    return {
+        userinfo: state.userinfo
+    }
+}
+
+function mapDispatchToProps(dspatch) {
+    return {}
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Doctor)

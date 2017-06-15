@@ -1,7 +1,8 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import { Link, hashHistory } from 'react-router'
-
 import SearchInput from '../SearchInput'
 
 import './style.less'
@@ -32,8 +33,20 @@ class Commet extends React.Component {
         )
     }
     enterHandle(value) {
-        console.log(value)
+        this.props.comment(value)    
     }
 }
 
-export default Commet
+function mapStateToProps(state) {
+    return {
+        userinfo: state.userinfo
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {}
+}
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Commet)

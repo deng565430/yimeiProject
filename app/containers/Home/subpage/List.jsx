@@ -40,8 +40,7 @@ class List extends React.Component {
     }
     // 获取首页数据
     loadFirstPageData() {
-        const cityName = this.props.cityName
-        const result = getListData(cityName, 0)
+        const result = getListData('cityName', 0)
         this.resultHandle(result)
     }
     // 加载更多数据
@@ -51,9 +50,8 @@ class List extends React.Component {
             isLoadingMore: true
         })
 
-        const cityName = this.props.cityName
         const page = this.state.page
-        const result = getListData(cityName, page)
+        const result = getListData('cityName', page)
         this.resultHandle(result)
 
         // 增加 page 技术

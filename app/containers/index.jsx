@@ -3,8 +3,11 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import LocalStore from '../util/localStore'
-import { CITYNAME } from '../redux/config/localStoreKey'
+import { USERNAME } from '../redux/config/localStoreKey'
 import * as userInfoActionsFromOtherFile from '../redux/actions/userinfo' 
+
+import Phone from './CallPhone'
+
 
 class App extends React.Component {
     constructor(props, context) {
@@ -22,17 +25,16 @@ class App extends React.Component {
                     ? this.props.children
                     : <div>正在加载...</div>
                 }
+                <Phone />
             </div>
         )
     }
     componentDidMount() {
-        // 获取位置信息
-        let cityName = LocalStore.getItem(CITYNAME)
-        if (cityName == null) {
-            cityName = '北京'
-        }
+        // 在这里获取用户信息
+        let userName = LocalStore.getItem(USERNAME)
+        console.log(userName)
         this.props.userInfoActions.update({
-            cityName: cityName
+            userName: userName
         })
 
         // 更改状态

@@ -34,17 +34,17 @@ class ListItem extends React.Component {
                         </p>
                     </div>     
                     </div>
+                    <div className="list-item-bottom">
+                        <div className="item-price-container clear-fix">
+                            <span className="price float-left"><i className="icon-feature "></i> 韩国进口玻尿酸</span>
+                            <span className="icon-ico-unfold  float-right"></span>
+                        </div>
+                        <div className="item-price-container clear-fix">
+                            <span className="price float-left"><i className="icon-feature "></i> 韩国进口水光针</span>
+                            <span className="icon-ico-unfold  float-right"></span>
+                        </div>
+                    </div>
                 </Link>
-                <div className="list-item-bottom">
-                    <div className="item-price-container clear-fix">
-                        <span className="price float-left"><i className="icon-feature "></i> 韩国进口玻尿酸</span>
-                        <span className="icon-ico-unfold  float-right"></span>
-                    </div>
-                    <div className="item-price-container clear-fix">
-                        <span className="price float-left"><i className="icon-feature "></i> 韩国进口水光针</span>
-                        <span className="icon-ico-unfold  float-right"></span>
-                    </div>
-                </div>
             </div>
         )
     }

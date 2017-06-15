@@ -3,7 +3,6 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import Header from './subpages/Header'
 import Desc from './subpages/Desc'
-import Buy from './subpages/Buy'
 
 class Activity extends React.Component {
     constructor(props, context) {
@@ -15,7 +14,6 @@ class Activity extends React.Component {
             <div>
                 <Header />
                 <Desc />
-                <Buy />
             </div>
         )
     }

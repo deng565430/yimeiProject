@@ -48,6 +48,7 @@
     "react-router": "^2.7.0",
     "react-swipe": "^5.0.5",
     "redux": "^3.5.2",
+    "scroll-behavior": "^0.9.3",
     "swipe-js-iso": "^2.0.3",
     "use-scroll-behavior": "^0.1.5",
     "whatwg-fetch": "^1.0.0"

@@ -1,8 +1,16 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { hashHistory } from 'react-router'
+import { browserHistory, hashHistory } from 'react-router'
 import configureStore from './redux/store/configureStore'
+import Historys from 'history'
+console.log(Historys)
+
+// 路由重定向， 解决跳转之后不是在顶部问题
+import UseScroll from 'use-scroll-behavior'
+const history = UseScroll(hashHistory)
+
+console.log(history)
 
 import './static/css/common.less'
 import './static/css/font.css'
@@ -14,7 +22,7 @@ import RouteMap from './router/routeMap'
 
 render(
     <Provider store={store}>
-        <RouteMap history={hashHistory}/>
+        <RouteMap history={history}/>
     </Provider>,
     document.getElementById('root')
 )

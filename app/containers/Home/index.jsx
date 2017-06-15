@@ -15,11 +15,11 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <HomeHeader cityName={this.props.userinfo.cityName}/>
+                <HomeHeader/>
                 <Category/>
                 <div style={{height: '15px'}}>{/* 分割线 */}</div>
                 <Ad/>
-                <List cityName={this.props.userinfo.cityName}/>
+                <List />
             </div>
         )
     }

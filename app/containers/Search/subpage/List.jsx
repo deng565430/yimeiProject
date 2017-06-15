@@ -43,10 +43,9 @@ class SearchList extends React.Component {
     }
     // 获取首页数据
     loadFirstPageData() {
-        const cityName = this.props.userinfo.cityName
         const keyword = this.props.keyword || ''
         const category = this.props.category
-        const result = getSearchData(0, cityName, category, keyword)
+        const result = getSearchData(0, 'cityName', category, keyword)
         this.resultHandle(result)
     }
     // 加载更多数据
@@ -56,11 +55,10 @@ class SearchList extends React.Component {
             isLoadingMore: true
         })
 
-        const cityName = this.props.userinfo.cityName
         const page = this.state.page
         const keyword = this.props.keyword || ''
         const category = this.props.category
-        const result = getSearchData(page, cityName, category, keyword)
+        const result = getSearchData(page, 'cityName', category, keyword)
         this.resultHandle(result)
 
         // 更新状态
