@@ -19,7 +19,7 @@ class Category extends React.Component {
     }
     render() {
         const opt = {
-            auto: 2500,
+            auto: 5000,
             callback: function (index) {
                 // 更新当前轮播图的index
                 this.setState({index: index});
@@ -31,15 +31,13 @@ class Category extends React.Component {
                     <div className="carousel-item">
                         <ul className="clear-fix">
                             <Link to="/search/jingdian"><li className="float-left jingdian">眼部</li></Link>
-                            <Link to="/search/ktv"><li className="float-left ktv">眼部</li></Link>
-                            <Link to="/search/gouwu"><li className="float-left gouwu">眼部</li></Link>
-                            <Link to="/search/shenghuofuwu"><li className="float-left shenghuofuwu">眼部</li></Link>
-                            <Link to="/search/jianshenyundong"><li className="float-left jianshenyundong">眼部</li></Link>
-                            <Link to="/search/meifa"><li className="float-left meifa">眼部</li></Link>
-                            <Link to="/search/qinzi"><li className="float-left qinzi">眼部</li></Link>
-                            <Link to="/search/xiaochikuaican"><li className="float-left xiaochikuaican">眼部</li></Link>
-                            <Link to="/search/zizhucan"><li className="float-left zizhucan">眼部</li></Link>
-                            <Link to="/search/jiuba"><li className="float-left jiuba">眼部</li></Link>
+                            <Link to="/search/ktv"><li className="float-left ktv">鼻部</li></Link>
+                            <Link to="/search/gouwu"><li className="float-left gouwu">美体塑性</li></Link>
+                            <Link to="/search/shenghuofuwu"><li className="float-left shenghuofuwu">皮肤美容</li></Link>
+                            <Link to="/search/jianshenyundong"><li className="float-left jianshenyundong">面部轮廓</li></Link>
+                            <Link to="/search/meifa"><li className="float-left meifa">胸部</li></Link>
+                            <Link to="/search/qinzi"><li className="float-left qinzi">激光脱毛</li></Link>
+                            <Link to="/search/xiaochikuaican"><li className="float-left xiaochikuaican">毛发种植</li></Link>
                         </ul>
                     </div>
                     <div className="carousel-item">
@@ -52,8 +50,6 @@ class Category extends React.Component {
                             <Link to="/search/huoguo"><li className="float-left huoguo">眼部</li></Link>
                             <Link to="/search/liren"><li className="float-left liren">眼部</li></Link>
                             <Link to="/search/dujiachuxing"><li className="float-left dujiachuxing">眼部</li></Link>
-                            <Link to="/search/zuliaoanmo"><li className="float-left zuliaoanmo">眼部</li></Link>
-                            <Link to="/search/zhoubianyou"><li className="float-left zhoubianyou">眼部</li></Link>
                         </ul>
                     </div>
                     <div className="carousel-item">
@@ -66,8 +62,6 @@ class Category extends React.Component {
                             <Link to="/search/huochejipiao"><li className="float-left huochejipiao">眼部</li></Link>
                             <Link to="/search/shaokao"><li className="float-left shaokao">眼部</li></Link>
                             <Link to="/search/jiazhuang"><li className="float-left jiazhuang">眼部</li></Link>
-                            <Link to="/search/chongwu"><li className="float-left chongwu">眼部</li></Link>
-                            <Link to="/search/all"><li className="float-left quanbufenlei">眼部</li></Link>
                         </ul>
                     </div>
                 </ReactSwipe>

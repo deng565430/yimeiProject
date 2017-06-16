@@ -13,10 +13,10 @@ class HospitalIntro extends React.Component {
            <div>
 	           {
 	           		this.props.data
-	           		?	<div>
+	           		?	<div className="hospital-intro">
 	           				<h1>上海玫瑰医疗美容医院</h1>
-	           				<div>
-	           					<p>医院介绍：</p>
+	           				<div className="hospital-intro-top">
+	           					<h3>医院介绍：</h3>
 	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
 	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
 	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
@@ -29,8 +29,8 @@ class HospitalIntro extends React.Component {
 	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
 	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
 	           				</div>
-	           				<div>
-	           					<p>医院环境</p>
+	           				<div className="hospital-intro-middle">
+	           					<h4>医院环境</h4>
 	           					<div>
 	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
 	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />

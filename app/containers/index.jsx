@@ -32,11 +32,9 @@ class App extends React.Component {
     componentDidMount() {
         // 在这里获取用户信息
         let userName = LocalStore.getItem(USERNAME)
-        console.log(userName)
         this.props.userInfoActions.update({
-            userName: userName
+            username: userName
         })
-
         // 更改状态
         this.setState({
             initDone: true

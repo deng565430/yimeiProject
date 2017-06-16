@@ -23,6 +23,23 @@ class User extends React.Component {
     componentDidMount() {
     	console.log(this.props);
     }
+
+
+   test() {
+        //滚动时保存滚动位置
+        window.addEventListener('scroll', function() {
+            const windowHeight = window.screen.height
+            if (windowHeight != 0) {　　　　
+                sessionStorage.setItem("offsetTop", windowHeight); //保存滚动位置
+                　　　
+            }
+        });
+
+    }
+
+
+
+
 }
 
 function mapStateToProps(state) {

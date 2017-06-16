@@ -25,7 +25,7 @@ class Doctor extends React.Component {
     }
     comment(data) {
         if (this.props.userinfo.userName == null) {
-            hashHistory.push('/login')
+            hashHistory.push('/register')
         }
     }
 }

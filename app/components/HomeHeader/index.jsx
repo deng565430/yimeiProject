@@ -1,6 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import { Link, browserHistory } from 'react-router'
+import { Link, hashHistory } from 'react-router'
 
 import SearchInput from '../SearchInput'
 
@@ -29,7 +29,7 @@ class HomeHeader extends React.Component {
         )
     }
     enterHandle(value) {
-        browserHistory.push('/search/all/' + encodeURIComponent(value))
+        hashHistory.push('/search/all/' + encodeURIComponent(value))
     }
 }
 

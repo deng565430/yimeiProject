@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?4kpn6u');
-  src:  url('../fonts/icomoon.eot?4kpn6u#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?4kpn6u') format('truetype'),
-    url('../fonts/icomoon.woff?4kpn6u') format('woff'),
-    url('../fonts/icomoon.svg?4kpn6u#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?9qacje');
+  src:  url('../fonts/icomoon.eot?9qacje#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?9qacje') format('truetype'),
+    url('../fonts/icomoon.woff?9qacje') format('woff'),
+    url('../fonts/icomoon.svg?9qacje#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-user:before {
+  content: "\e90d";
+}
+.icon-nick:before {
+  content: "\e917";
+}
+.icon-affirmpassword:before {
+  content: "\e918";
+}
+.icon-phone-num:before {
+  content: "\e919";
+}
+.icon-verification:before {
+  content: "\e91a";
+}
+.icon-password:before {
+  content: "\e91b";
+}
 .icon-pullup:before {
   content: "\e904";
 }

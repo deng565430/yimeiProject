@@ -7,7 +7,7 @@ import { hashHistory } from 'react-router'
 import * as userInfoActionsFromOtherFile from '../../redux/actions/userinfo' 
 
 import Header from '../../components/Header'
-import LoginComponent from '../../components/Login'
+import LoginComponent from '../../components/Register'
 
 class Login extends React.Component {
     constructor(props, context) {
@@ -20,7 +20,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-                <Header title="注册"/>
+                <Header title="登录"/>
                 <LoginComponent loginHandle={this.loginHandle.bind(this)}/>
             </div>
         )
@@ -28,6 +28,7 @@ class Login extends React.Component {
     componentDidMount() {
         // 判断是否已经登录
         this.doCheck()
+
     }
     doCheck() {
         const userinfo = this.props.userinfo
@@ -37,7 +38,7 @@ class Login extends React.Component {
         }
     }
     // 处理登录之后的事情
-    loginHandle(username) {
+    loginHandle(username, password) {
         // 保存用户名
         const actions = this.props.userInfoActions
         let userinfo = this.props.userinfo

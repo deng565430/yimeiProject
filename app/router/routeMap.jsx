@@ -11,6 +11,7 @@ import HospitalIntro from '../containers/HospitalIntro'
 import Case from '../containers/Case'
 import User from '../containers/User'
 import Login from '../containers/Login'
+import Register from '../containers/Register'
 import NotFound from '../containers/404'
 
 // 如果是大型项目，router部分就需要做更加复杂的配置
@@ -30,6 +31,7 @@ class RouterMap extends React.Component {
                     <Route path='/case/:id' component={Case}/>
                     <Route path='/user' component={User}/>
                     <Route path='/login' component={Login}/>
+                    <Route path='/register' component={Register}/>
                     <Route path='*' component={NotFound}/>
                 </Route>
             </Router>

@@ -1,5 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import { Link } from 'react-router'
 
 import './style.less'
 
@@ -37,8 +38,8 @@ class Header extends React.Component {
                         </div>
                     </div>
                     <div className="activity-header-addr-middle">
-                        <span><i className="icon-hospital"></i> 医院主页</span>
-                        <span><i className="icon-service"></i> 在线客服</span>
+                        <Link to="/hospital/1"><button><i className="icon-hospital"></i> 医院主页</button></Link>
+                        <Link to="/hospital/1"><button><i className="icon-service"></i> 在线客服</button></Link>
                     </div>
                     <div>
                         <p>主治医师： 王*医师</p>
