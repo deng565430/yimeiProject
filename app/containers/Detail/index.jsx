@@ -15,7 +15,10 @@ class Detail extends React.Component {
         this.state = {
             header: {},
             describe: {},
-            recommed: []
+            recommed: [],
+            activity: [],
+            cases: [],
+            id: ''
         }
     }
     render() {
@@ -28,9 +31,9 @@ class Detail extends React.Component {
                     ?   <div>
                             <Header data={this.state.header}/>
                             <Describe data={this.state.describe} />
-                            <Recommend data={this.state.recommed} />
-                            <Case />
-                            <Activity />
+                            <Recommend data={this.state.recommed} id={this.state.id}/>
+                            <Case data={this.state.cases} id={this.state.id}/>
+                            <Activity data={this.state.activity} id={this.state.id}/>
                         </div>
                     : ''    
                 }
@@ -39,25 +42,30 @@ class Detail extends React.Component {
         )
     }
     componentDidMount() {
-        const result = getInfoData();
+        const ID = this.props.params.id;
+        const result = getInfoData(ID);
         result.then(res => {
             return res.json()
         }).then(json => {
             this.setState({
                 header:{
                     name: json.data.name,
-                    addr: json.data.addr,
-                    degree_safe: json.data.degree_safe,
-                    feedback_rate: json.data.feedback_rate,
-                    follow: json.data.follow,
-                    logo: json.data.logo,
+                    addr: json.data.address,
+                    degree_safe: json.data.popularity,
+                    feedback_rate: json.data.activity,
+                    follow: json.data.kobei,
+                    logo: json.data.big_logo,
                     feature: json.data.feature
                 },
                 describe: {
-                    brief_introduct: json.data.brief_introduct,
-                    pic: json.data.pic
+                    brief_introduct: json.data.introduct,
+                    pic: json.data.hospital_image,
+                    id: ID
                 },
-                recommed:json.data.tuijian_doctor
+                cases: json.data.cases,
+                recommed:json.data.doctorItems,
+                activity: json.data.activityItems,
+                id: ID
             })
         })
     }

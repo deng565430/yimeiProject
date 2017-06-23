@@ -14,16 +14,17 @@ class Describe extends React.Component {
     render() {
         const brief_introduct = this.props.data.brief_introduct;
         const pic = this.props.data.pic;
+        const id = this.props.data.id;
         return (
           <div>
                 {
                     this.props.data.pic
-                    ? <ComponentsSlideshow data={pic}/>
+                    ? <ComponentsSlideshow data={pic} id={id} />
                     : ''
                 }
                 {
                     this.props.data.brief_introduct
-                    ? <ComponentsDescribe data={brief_introduct}/>
+                    ? <ComponentsDescribe data={brief_introduct} id={id} />
                     : ''
                 }
           </div>

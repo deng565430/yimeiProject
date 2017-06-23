@@ -11,9 +11,11 @@ class Activity extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
+        const data = this.props.data
+        const id = this.props.id
         return (
           <div>
-                <ComponentsDetailActivity />
+                <ComponentsDetailActivity data={data} id={id}/>
           </div>
         )
     }

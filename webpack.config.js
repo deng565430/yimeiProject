@@ -59,12 +59,12 @@ module.exports = {
         })
     ],
 
-    devServer: {
+    devServer: { 
         proxy: {
           // 凡是 `/api` 开头的 http 请求，都会被代理到 localhost:3000 上，由 koa 提供  数据。
           // koa 代码在 ./server 目录中，启动命令为 npm run server
           '/api': {
-            target: 'localhost:3000', //'192.168.1.133',
+            target: 'http://192.168.1.112:8080', //'192.168.1.112',
             secure: false
           }
         },

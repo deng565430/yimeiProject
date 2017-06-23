@@ -12,11 +12,12 @@ class Recommend extends React.Component {
     }
     render() {
         const data = this.props.data
+        const id = this.props.id
         return (
           <div>
                {
                     this.props.data 
-                    ?  <ComponentsRecommend data={data} />
+                    ?  <ComponentsRecommend data={data} id={id}/>
                     : ''
                }
           </div>

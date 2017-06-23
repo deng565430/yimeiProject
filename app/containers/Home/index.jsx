@@ -17,7 +17,7 @@ class Home extends React.Component {
             <div>
                 <HomeHeader/>
                 <Category/>
-                <div style={{height: '15px'}}>{/* 分割线 */}</div>
+                <div style={{height: '10px'}}>{/* 分割线 */}</div>
                 <Ad/>
                 <List />
             </div>

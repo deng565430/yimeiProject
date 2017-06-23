@@ -12,7 +12,7 @@ class Feature extends React.Component {
         const data = this.props.data;
         return (
           <div className="detail-feature">
-            <div className="feature-top"> <i className="icon-addr"></i> {data.addr}</div>
+            <div className="feature-top"> <i className="icon-addr"></i>{data.addr}</div>
             <div className="feature-middle"> <i className="icon-feature "></i> 特色</div>
             <div className="feature-buttom">{data.feature}</div>
           </div>

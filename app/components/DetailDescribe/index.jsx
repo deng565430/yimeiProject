@@ -15,12 +15,8 @@ class Describe extends React.Component {
             <div className="detail-desc">
                 <p>
                     {this.props.data}
-                    簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-                    簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-                    簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介簡介
-                    <Link to="/hospital/jingdian">查看更多<i className="icon-ico-unfold"></i></Link>
                 </p>
-
+                <Link to={'/hospital/' + this.props.id}>查看更多<i className="icon-ico-unfold"></i></Link>
             </div>
           </div>
         )

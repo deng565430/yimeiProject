@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, IndexRoute, hashHistory  } from 'react-router'
+import { Router, Route, Redirect, IndexRoute, hashHistory  } from 'react-router'
 
 import App from '../containers'
 import Home from '../containers/Home'
@@ -17,6 +17,12 @@ import NotFound from '../containers/404'
 // 如果是大型项目，router部分就需要做更加复杂的配置
 // 参见 https://github.com/reactjs/react-router/tree/master/examples/huge-apps
 
+/*const Detail = (location, cb) => {
+    require.ensure([], require => {
+        cb(null, require('../containers/Detail').default)
+    },'Detail')
+}*/
+
 class RouterMap extends React.Component {
     render() {
         return (
@@ -26,13 +32,14 @@ class RouterMap extends React.Component {
                     <Route path='/search/:category(/:keyword)' component={Search}/>
                     <Route path='/detail/:id' component={Detail}/>
                     <Route path='/hospital/:id' component={HospitalIntro}/>
-                    <Route path='/doctor/:id' component={Doctor}/>
-                    <Route path='/activity/:id' component={Activity}/>
+                    <Route path='/doctor/:hospitalId/:doctorId' component={Doctor}/>
+                    <Route path='/activity/:hospitalId/:activityId' component={Activity}/>
                     <Route path='/case/:id' component={Case}/>
                     <Route path='/user' component={User}/>
                     <Route path='/login' component={Login}/>
                     <Route path='/register' component={Register}/>
-                    <Route path='*' component={NotFound}/>
+                    //<Route path='*' component={NotFound}/>
+                    <Redirect from='*' to='/'  />
                 </Route>
             </Router>
         )

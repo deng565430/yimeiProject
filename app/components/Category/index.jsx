@@ -19,10 +19,12 @@ class Category extends React.Component {
     }
     render() {
         const opt = {
+            index: 2,
             auto: 5000,
             callback: function (index) {
                 // 更新当前轮播图的index
                 this.setState({index: index});
+                console.log(index)
             }.bind(this)
         }
         return (
@@ -30,46 +32,29 @@ class Category extends React.Component {
                 <ReactSwipe swipeOptions={opt}>
                     <div className="carousel-item">
                         <ul className="clear-fix">
-                            <Link to="/search/jingdian"><li className="float-left jingdian">眼部</li></Link>
-                            <Link to="/search/ktv"><li className="float-left ktv">鼻部</li></Link>
-                            <Link to="/search/gouwu"><li className="float-left gouwu">美体塑性</li></Link>
-                            <Link to="/search/shenghuofuwu"><li className="float-left shenghuofuwu">皮肤美容</li></Link>
-                            <Link to="/search/jianshenyundong"><li className="float-left jianshenyundong">面部轮廓</li></Link>
-                            <Link to="/search/meifa"><li className="float-left meifa">胸部</li></Link>
-                            <Link to="/search/qinzi"><li className="float-left qinzi">激光脱毛</li></Link>
-                            <Link to="/search/xiaochikuaican"><li className="float-left xiaochikuaican">毛发种植</li></Link>
+                            <Link to="/search/yanbu"><li className="float-left yanbu">眼部</li></Link>
+                            <Link to="/search/bibu"><li className="float-left bibu">鼻部</li></Link>
+                            <Link to="/search/meitisuxing"><li className="float-left meitisuxing">美体塑性</li></Link>
+                            <Link to="/search/mianbulunkuo"><li className="float-left mianbulunkuo">面部轮廓</li></Link>
+                            <Link to="/search/xiongbu"><li className="float-left xiongbu">胸部</li></Link>
+                            <Link to="/search/jiguangtuomao"><li className="float-left jiguangtuomao">激光脱毛</li></Link>
                         </ul>
                     </div>
                     <div className="carousel-item">
                         <ul className="clear-fix">
-                            <Link to="/search/meishi"><li className="float-left meishi">眼部</li></Link>
-                            <Link to="/search/dianying"><li className="float-left dianying">眼部</li></Link>
-                            <Link to="/search/jiudian"><li className="float-left jiudian">眼部</li></Link>
-                            <Link to="/search/xuixianyule"><li className="float-left xuixianyule">眼部</li></Link>
-                            <Link to="/search/waimai"><li className="float-left waimai">眼部</li></Link>
-                            <Link to="/search/huoguo"><li className="float-left huoguo">眼部</li></Link>
-                            <Link to="/search/liren"><li className="float-left liren">眼部</li></Link>
-                            <Link to="/search/dujiachuxing"><li className="float-left dujiachuxing">眼部</li></Link>
-                        </ul>
-                    </div>
-                    <div className="carousel-item">
-                        <ul className="clear-fix">
-                            <Link to="/search/ribencai"><li className="float-left ribencai">眼部</li></Link>
-                            <Link to="/search/spa"><li className="float-left SPA">眼部</li></Link>
-                            <Link to="/search/jiehun"><li className="float-left jiehun">眼部</li></Link>
-                            <Link to="/search/xuexipeixun"><li className="float-left xuexipeixun">眼部</li></Link>
-                            <Link to="/search/xican"><li className="float-left xican">眼部</li></Link>
-                            <Link to="/search/huochejipiao"><li className="float-left huochejipiao">眼部</li></Link>
-                            <Link to="/search/shaokao"><li className="float-left shaokao">眼部</li></Link>
-                            <Link to="/search/jiazhuang"><li className="float-left jiazhuang">眼部</li></Link>
+                            <Link to="/search/pifumeirong"><li className="float-left pifumeirong">皮肤美容</li></Link>
+                            <Link to="/search/banyongjiu"><li className="float-left banyongjiu">半永久</li></Link>
+                            <Link to="/search/zhifangtianchong"><li className="float-left zhifangtianchong">脂肪填充</li></Link>
+                            <Link to="/search/maofazhongzhi"><li className="float-left maofazhongzhi">毛发种植</li></Link>
+                            <Link to="/search/kouqiang"><li className="float-left kouqiang">口腔</li></Link>
+                            <Link to="/search/kangshuailao"><li className="float-left kangshuailao">抗衰老</li></Link>
                         </ul>
                     </div>
                 </ReactSwipe>
                 <div className="index-container">
                     <ul>
-                        <li className={this.state.index === 0 ? "selected" : ''}></li>
-                        <li className={this.state.index === 1 ? "selected" : ''}></li>
-                        <li className={this.state.index === 2 ? "selected" : ''}></li>
+                        <li className={this.state.index === 0 || this.state.index === 2? "selected" : ''}></li>
+                        <li className={this.state.index === 1 || this.state.index === 3? "selected" : ''}></li>
                     </ul>
                 </div>
             </div>

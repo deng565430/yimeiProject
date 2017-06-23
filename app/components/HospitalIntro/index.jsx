@@ -9,50 +9,30 @@ class HospitalIntro extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
+    	const data = this.props.data
         return (
            <div>
 	           {
-	           		this.props.data
+	           		data
 	           		?	<div className="hospital-intro">
-	           				<h1>上海玫瑰医疗美容医院</h1>
+	           				<h1>{data.name}</h1>
 	           				<div className="hospital-intro-top">
 	           					<h3>医院介绍：</h3>
-	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
-	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
-	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
-	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
-	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
-	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
-	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
-	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
-	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
-	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
-	           					<p>医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍医院介绍</p>
+	           					<p>{data.introduct}</p>
+	           					<h3>医院优势项目：</h3>
+	           					<p>{data.feature}</p>
+	           					
 	           				</div>
 	           				<div className="hospital-intro-middle">
 	           					<h4>医院环境</h4>
 	           					<div>
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
-	           						<img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" />
+	           						{
+	           							data.hospital_image
+	           							? 	data.hospital_image.map((item, index) => {
+	           									return <img key={index} src={item} />
+	           								})
+	           							: ''
+	           						}
 	           					</div>
 	           				</div>
 	           			</div>

@@ -10,18 +10,15 @@ class DoctorHeader extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
+        const data = this.props.data
         return (
             <div className="doc-header">
                <div className="doc-header-left">
-                   <img src="" alt=""/>11
+                   <img src={data.photo} alt={data.name}/>
                </div>
                <div className="doc-header-right">
-                   <h4>張三丰 <span> 皮肤美容医生</span></h4>
-                   <p>韩国首尔大学讲师</p>
-                   <p>韩国首尔大学讲师</p>
-                   <p>韩国首尔大学讲师</p>
-                   <p>韩国首尔大学讲师</p>
-                   <p>韩国首尔大学讲师</p>
+                   <h4>{data.name} <span> {data.position}</span></h4>
+                   <p>{data.career_exper}</p>
                </div>
             </div>
         )

@@ -1,7 +1,7 @@
 import { get } from '../get'
 
 export function getInfoData(id) {
-   const result = get('/api/detail/info/' + id)
+   const result = get('/api/date/getHospitalById?id=' + id)
    return result
 }
 

@@ -9,17 +9,13 @@ class DoctorDesc extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
+        const data = this.props.data
         return (
             <div className="doc-desc">
                <div>医生介绍</div>
                <ul>
-                 <li> 医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍绍医生介绍</li>
-                 <li> 医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍</li>
-                 <li> 医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍</li>
-                 <li> 医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍</li>
-                 <li> 医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍</li>
-                 <li> 医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍</li>
-                 <li> 医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍医生介绍</li>
+                 <li> {data.learning_course}</li>
+                 <li> {data.introduct}</li>
                </ul>
             </div>
         )

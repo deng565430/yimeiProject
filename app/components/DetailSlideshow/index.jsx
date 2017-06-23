@@ -20,12 +20,18 @@ class Slideshow extends React.Component {
                 this.setState({index: index});
             }.bind(this)
         }
+        const data = this.props.data
+        const id = this.props.id
         return (
           <div className="detail-silde">
-              <ReactSwipe swipeOptions={opt}> 
-                <div><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></div>
-                <div><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></div>
-                <div><img src="http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png" /></div>
+              <ReactSwipe swipeOptions={opt}>
+              {
+                data
+                ? data.map((item, index) => {
+                    return <div key={index}><img src={item} /></div>
+                })
+                : ''
+              }
               </ReactSwipe> 
           </div>
         )

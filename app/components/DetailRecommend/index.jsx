@@ -1,7 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
-import Carousel from '../Carousel'
+import Item from './Item'
 
 import './style.less'
 
@@ -14,14 +14,15 @@ class DetailRecommend extends React.Component {
         }
     }
     render() {
-        console.log(this.props.data)
+        const data = this.props.data
+        const id = this.props.id
         return (
           <div className="detail-recommend">
                 <div className="detail-recommend-doctor">
                     <i className="icon-doctor"></i> 推荐医生
                 </div>
                 <div className="parent-recommend">
-                   <Carousel data={this.state.data}/>
+                   <Item data={data} id={id}/>
                 </div>
           </div>
         )

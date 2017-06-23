@@ -29,7 +29,7 @@ class List extends React.Component {
                 {
                     this.state.hasMore
                     ? <LoadMore isLoadingMore={this.state.isLoadingMore} loadMoreFn={this.loadMoreData.bind(this)}/>
-                    : ''
+                    : <div className="no-more">没有更多了</div>
                 }
             </div>
         )
@@ -40,7 +40,7 @@ class List extends React.Component {
     }
     // 获取首页数据
     loadFirstPageData() {
-        const result = getListData('cityName', 0)
+        const result = getListData(0)
         this.resultHandle(result)
     }
     // 加载更多数据
@@ -51,7 +51,7 @@ class List extends React.Component {
         })
 
         const page = this.state.page
-        const result = getListData('cityName', page)
+        const result = getListData(page)
         this.resultHandle(result)
 
         // 增加 page 技术
@@ -65,9 +65,9 @@ class List extends React.Component {
         result.then(res => {
             return res.json()
         }).then(json => {
-            const hasMore = json.hasMore
+            console.log(json)
+            const hasMore = json.recordsTotal === 0 ? false : true
             const data = json.data
-
             this.setState({
                 hasMore: hasMore,
                 // 注意，这里讲最新获取的数据，拼接到原数据之后，使用 concat 函数

@@ -24,19 +24,19 @@ class Header extends React.Component {
             	<div className="detail-descs">
             		<div>
             			<ul>
-            				<li>关注度</li>
+                            <li>关注度 <span> {data.follow}</span></li>
             				<li><Star star={data.follow} /></li>
             			</ul>
             		</div>
             		<div>
             			<ul>
-            				<li>安全度</li>
+            				<li>安全度 <span> {data.degree_safe}</span></li>
             				<li><Star star={data.degree_safe} /></li>
             			</ul>
             		</div>
             		<div>
             			<ul>
-            				<li>好评率</li>
+            				<li>好评率 <span> {data.feedback_rate}</span></li>
             				<li><Star star={data.feedback_rate} /></li>
             			</ul>
             		</div>

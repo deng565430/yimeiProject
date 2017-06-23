@@ -1,5 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import { Link } from 'react-router'
 
 import Carousel from '../../Carousel'
 
@@ -10,14 +11,15 @@ class Item extends React.Component {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
-            data: ['/case/1', '/case/1', '/case/1', '/case/1', '/case/1']
         }
     }
     render() {
+        const data = this.props.data
+        const id = this.props.id
         return (
            <div className="detail-case-list">
-             <Carousel data={this.state.data} />
-             <p><i className="icon-sign"></i> 鼻综合，下巴整形</p>
+             <Carousel data={data.pic_after} id={id}/>
+             <Link to={'/case/' + data.proj}><p><i className="icon-sign"></i> {data.proj}</p></Link>
           </div>
         )
     }

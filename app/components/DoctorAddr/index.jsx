@@ -1,6 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-
+import { Link } from 'react-router'
 import './style.less'
 
 class DoctorAddr extends React.Component {
@@ -9,20 +9,21 @@ class DoctorAddr extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
+      const data = this.props.data
         return (
             <div className="doc-addr">
                <div>
-                   <p>所在医院：上海美容医院<span className="icon-ico-unfold float-right"></span></p>
+                   <Link to={'/detail/' + data.id}><p>所在医院：<span>{data.hopitalname}</span><i className="icon-ico-unfold float-right"></i></p></Link>
                </div>
                <div>
-                   <p>职业医师编号： 2200118</p>
+                   {/*<p>职业医师编号</p>*/}
                </div>
                <div>
-                   <p>所在区域：上海市</p>
+                   <p>所在区域：<span>{data.learning_course}</span></p>
                </div>
                <div>
-                  <p>擅长项目</p>
-                  <p>祛皱抗衰美容养颜</p>
+                  <p>擅长项目：</p>
+                  <span> {data.feature}</span>
                </div>
             </div>
         )

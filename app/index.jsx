@@ -3,14 +3,12 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { browserHistory, hashHistory } from 'react-router'
 import configureStore from './redux/store/configureStore'
-import Historys from 'history'
-console.log(Historys)
+//import Historys from 'history'
 
 // 路由重定向， 解决跳转之后不是在顶部问题
 import UseScroll from 'use-scroll-behavior'
 const history = UseScroll(hashHistory)
 
-console.log(history)
 
 import './static/css/common.less'
 import './static/css/font.css'

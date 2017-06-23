@@ -1,11 +1,11 @@
 import { get } from '../get'
 
 export function getAdData() {
-    const result = get('/api/homead')
+    const result = get('/api/date/date/gethomedate')
     return result
 }
 
-export function getListData(city, page) {
-    const result = get('/api/homelist/' + encodeURIComponent(city) + '/' + page)
+export function getListData(start) {
+    const result = get('/api/date/gethomedate?start=' + start)
     return result
 }
