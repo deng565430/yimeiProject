@@ -32,7 +32,7 @@ class SearchList extends React.Component {
                 {
                     this.state.hasMore
                     ? <LoadMore isLoadingMore={this.state.isLoadingMore} loadMoreFn={this.loadMoreData.bind(this)}/>
-                    : ''
+                    : <div className="no-more">没有更多数据了</div>
                 }
             </div>
         )
@@ -44,8 +44,7 @@ class SearchList extends React.Component {
     // 获取首页数据
     loadFirstPageData() {
         const keyword = this.props.keyword || ''
-        const category = this.props.category
-        const result = getSearchData(0, 'cityName', category, keyword)
+        const result = getSearchData(0, keyword)
         this.resultHandle(result)
     }
     // 加载更多数据
@@ -57,8 +56,7 @@ class SearchList extends React.Component {
 
         const page = this.state.page
         const keyword = this.props.keyword || ''
-        const category = this.props.category
-        const result = getSearchData(page, 'cityName', category, keyword)
+        const result = getSearchData(page, keyword)
         this.resultHandle(result)
 
         // 更新状态
@@ -77,7 +75,7 @@ class SearchList extends React.Component {
         result.then(res => {
             return res.json()
         }).then(json => {
-            const hasMore = json.hasMore
+            const hasMore = json.recordsTotal === 0 ? false : true
             const data = json.data
 
             this.setState({
