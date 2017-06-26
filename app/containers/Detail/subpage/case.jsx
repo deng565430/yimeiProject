@@ -11,11 +11,15 @@ class Case extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
-        const data = this.props.data
+        const data = this.props.data;
         const id = this.props.id
         return (
           <div>
-                <ComponentsDetailCase data={data} id={id}/>
+            {
+                this.props.data
+                ?   <ComponentsDetailCase data={data} id={id}/>
+                : ''
+            }
           </div>
         )
     }

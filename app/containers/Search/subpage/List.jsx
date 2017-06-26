@@ -44,6 +44,8 @@ class SearchList extends React.Component {
     // 获取首页数据
     loadFirstPageData() {
         const keyword = this.props.keyword || ''
+        const category = this.props.category
+        console.log(category)
         const result = getSearchData(0, keyword)
         this.resultHandle(result)
     }

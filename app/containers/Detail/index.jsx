@@ -1,6 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { getInfoData } from '../../fetch/detail/detai'
+import { api } from '../../util/api'
 
 import Header from './subpage/Header'
 import Describe from './subpage/Describe'

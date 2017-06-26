@@ -1,6 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import ReactSwipe from 'react-swipe'
+import { path } from '../../util/api'
 
 import './style.less'
 
@@ -28,7 +29,7 @@ class Slideshow extends React.Component {
               {
                 data
                 ? data.map((item, index) => {
-                    return <div key={index}><img src={item} /></div>
+                    return <div key={index}><img src={path + item} /></div>
                 })
                 : ''
               }
